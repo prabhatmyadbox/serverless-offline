@@ -5,7 +5,10 @@
   "description": "Emulate AWS λ and API Gateway locally when developing your Serverless project",
   "license": "MIT",
   "main": "./src/index.js",
-  "exports": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./lambda": "./src/lambda/index.js"
+  },
   "type": "module",
   "scripts": {
     "format": "eslint . --fix",
@@ -50,6 +53,7 @@
     "websocket"
   ],
   "files": [
+    "src/**",
     "dist/**",
     "package.json",
     "LICENSE",
